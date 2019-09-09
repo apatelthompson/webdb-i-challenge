@@ -43,11 +43,11 @@ server.post("/accounts", (req, res) => {
         .where({ id })
         .first()
         .then(account => {
-          res.status(200).json(res);
+          res.status(200).json(account);
         });
     })
     .catch(err => {
-      res.status(500).json({ message: "Failed to get accounts" });
+      res.status(500).json({ message: "Failed to add account" });
     });
 });
 
